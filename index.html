@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Tajawal&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <title>Students Info</title>
+</head>
+<body id="body">
+    <div class="students_info">
+        
+        <div class="head">
+
+            <h2>إضافة طالب</h2>
+
+        </div>
+
+
+        <div class="inputs">
+            
+            <div>
+                <label for="usr">اسم المستخدم : </label>
+                <input class="input" placeholder="Yazan_175031" title="Yazan_175031" type="text" id="usr">
+                
+            </div>
+            <div>
+                <label for="Name">اسم الطالب : </label>
+                <input class="input" placeholder="يزن عاقل" title="أدخل الاسم بالعربية" type="text" id="Name">
+                
+            </div>
+            <div>
+                 <label for="date">التاريخ : </label>
+                 <input class="input" title="من 1960 حتى 2004" type="date" id="date" min="1960-01-01" max="2004-01-01">
+                
+            </div>
+            <div>
+                <label for="programm">البرنامج : </label>
+                <select class="input" name="programm" id="programm">
+                    <option value="TIC">TIC</option>
+                    <option value="BAIT">BAIT</option>
+                    <option value="ITE">ITE</option>
+                </select>
+                
+            </div>
+            <div>
+                <label for="tel">الموبايل : </label>
+                <input class="input" dir="ltr" placeholder="+963-9xxxxxxxx" title="+11-7654321 أو" type="text" id="tel">
+                
+            </div>
+
+        </div>
+        
+        <div class="captcha-container">
+            <input type="text" id="captcha" disabled/><br/><br/>
+            <input type="text" id="inputText" placeholder="ادخل رمز كابتشا هنا"/><br/><br/>
+            <button id="Refresh">رمز جديد</button>
+        </div>
+
+        <button id="add" class="click">إضافة</button>
+        <hr>
+
+        <div class="outputs">
+
+            <h2>جدول باسماء الطلاب</h2>
+
+            <form>
+                <div>
+                    <input class="click" id="rad_num" type="radio" value="" name="rad">
+                    <label for="rad_num">رقم المستخدم</label>
+
+                    <input class="click" id="rad_name" type="radio" value="" name="rad">
+                    <label for="rad_name">اسم الطالب</label>
+
+                    <input class="click" id="rad_pro" type="radio" value="" name="rad">
+                    <label for="rad_pro">البرنامج</label>
+                </div>
+            </form>
+
+            <form>
+                <label for="program">البرنامج : </label>
+                <select name="program" id="program" class="click">
+                    <option value="All">All</option>
+                    <option value="TIC">TIC</option>
+                    <option value="BAIT">BAIT</option>
+                    <option value="ITE">ITE</option>
+                </select>
+            </form>
+
+
+            <table>
+                <tr>
+                    <th>متسلسل</th>
+                    <th>اسم المستخدم</th>
+                    <th>اسم الطالب</th>
+                    <th>البرنامج</th>
+                </tr>
+                <tbody id="t-body"></tbody>
+            </table>
+         </div>
+
+        <button id="convert" class="click">Convert To JSON</button>
+        <div id="div_json" hidden>
+            <textarea id="json_container" placeholder="JSON content">
+            </textarea>
+        </div>
+        
+    </div>
+
+    <script src="functions.js"></script>
+
+</body>
+</html>
