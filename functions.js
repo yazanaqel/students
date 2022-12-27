@@ -7,7 +7,6 @@ document.getElementById('add').onclick=ADD;
 document.getElementById('convert').onclick=Convert;
 document.getElementById('rad_pro').onclick=SORT_BY_PRO;
 document.getElementById('rad_name').onclick=SORT_BY_NAME;
-document.getElementById('rad_num').onclick=SORT_BY_NUM;
 document.getElementById('program').onchange=fltr;
 document.getElementById('Refresh').onclick=generateCaptcha;
 document.getElementById('body').onload=generateCaptcha;
@@ -169,12 +168,6 @@ document.getElementById('body').onload=generateCaptcha;
             return 1;
             return 0;
         });
-        show();
-    }
-
-    function SORT_BY_NUM(){
-
-
         show();
     }
 
